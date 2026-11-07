@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8BD03055-0205-4F97-B422-6E7DBE42C090}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hotel_Billing_System</RootNamespace>
+    <AssemblyName>Hotel_Billing_System</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>C:\Users\gimha\Music\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>C:\Users\gimha\Music\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminLogin.Designer.cs">
+      <DependentUpon>adminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cafeshopmanagemantsystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafeshopmanagemantsystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cafeshopmanagemantsystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafeshopmanagemantsystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cafeshopmanagemantsystemDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafeshopmanagemantsystemDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cafeshopmanagemantsystemDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafeshopmanagemantsystemDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cafeshopmanagemantsystemDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafeshopmanagemantsystemDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="DBCashier.cs" />
+    <Compile Include="DBCategory.cs" />
+    <Compile Include="DBProducts.cs" />
+    <Compile Include="DBSetting.cs" />
+    <Compile Include="DllImport.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProduct.cs" />
+    <Compile Include="FrmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrint.Designer.cs">
+      <DependentUpon>FrmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\ExecuteReader.cs" />
+    <Compile Include="Froms\FormCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\FormCustomers.Designer.cs">
+      <DependentUpon>FormCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\AddCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\AddCashier.Designer.cs">
+      <DependentUpon>AddCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\FormCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\FormCategory.Designer.cs">
+      <DependentUpon>FormCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\FormProduct.Designer.cs">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\FormSetting.Designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\ProductDetails.cs" />
+    <Compile Include="LoadingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingPage.Designer.cs">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\AddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\AddAdmin.Designer.cs">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\formAddcashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\formAddcashier.Designer.cs">
+      <DependentUpon>formAddcashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\ProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\ProductDetails.Designer.cs">
+      <DependentUpon>ProductDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDetails.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.cs" />
+    <Compile Include="Setting.cs" />
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="UserPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel.Designer.cs">
+      <DependentUpon>UserPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanelform.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserPanelform.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adminLogin.resx">
+      <DependentUpon>adminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrint.resx">
+      <DependentUpon>FrmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\FormCustomers.resx">
+      <DependentUpon>FormCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\AddCashier.resx">
+      <DependentUpon>AddCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\FormCategory.resx">
+      <DependentUpon>FormCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\FormProduct.resx">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingPage.resx">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\AddAdmin.resx">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\formAddcashier.resx">
+      <DependentUpon>formAddcashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\ProductDetails.resx">
+      <DependentUpon>ProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductDetails.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductDetails.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RptReceipt.rdlc" />
+    <EmbeddedResource Include="UserPanel.resx">
+      <DependentUpon>UserPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanelform.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserPanelform.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="cafeshopmanagemantsystemDataSet.xsc">
+      <DependentUpon>cafeshopmanagemantsystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafeshopmanagemantsystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet.xss">
+      <DependentUpon>cafeshopmanagemantsystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet1.xsc">
+      <DependentUpon>cafeshopmanagemantsystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafeshopmanagemantsystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet1.xss">
+      <DependentUpon>cafeshopmanagemantsystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet2.xsc">
+      <DependentUpon>cafeshopmanagemantsystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafeshopmanagemantsystemDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet2.xss">
+      <DependentUpon>cafeshopmanagemantsystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet3.xsc">
+      <DependentUpon>cafeshopmanagemantsystemDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafeshopmanagemantsystemDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet3.xss">
+      <DependentUpon>cafeshopmanagemantsystemDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet4.xsc">
+      <DependentUpon>cafeshopmanagemantsystemDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafeshopmanagemantsystemDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafeshopmanagemantsystemDataSet4.xss">
+      <DependentUpon>cafeshopmanagemantsystemDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Receipt.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-order-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-full-screen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-full-screen-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1590846406792-0adc7f938f1d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader-2_food.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-new-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-details-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-food-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-food-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-24 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a-cup-of-coffee-with-coffee-beans-free-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\710oUVVawZL.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1112959-cafe-wallpaper-1920x1080-notebook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-french-cafes-image_2522585.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71a0PWlJPUL.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-shop-background-02x9a49rdcr5c18i.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-d-illustration-of-architecturally-designed-coffee-shop-with-mockup-banner-and-image_3783381.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-french-cafes-image_25225851.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1112959-cafe-wallpaper-1920x1080-notebook1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eab4009629b451c936baa446cdf58dcb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashierimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashierimg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custometimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customerimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tincome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\income.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
